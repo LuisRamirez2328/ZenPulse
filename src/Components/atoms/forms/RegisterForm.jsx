@@ -33,7 +33,7 @@ function RegisterForm() {
       setFirstName(data.firstname);
       navigate('/dashboard');
     } catch (error) {
-      console.error('Ya existe un usuario con este correo electrónico:');
+      console.log(error);
       Swal.fire({
         icon: 'error',
         title: 'Error de registro',
