@@ -8,13 +8,14 @@ function RegisterForm() {
   const { setFirstName } = useUser();
 
   const handleRegister = async (data) => {
-    try {
+    try { 
+      console.log(data)
       const response = await fetch('http://18.211.53.38:4000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body:data,
       });
 
       const responseData = await response.json();
